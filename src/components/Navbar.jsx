@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <header className="navbar">
-      <a href="#home" className="logo">Ivan Clyd</a>
+      <a href="#home" className="logo">Ivan Clyd Suello</a>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
