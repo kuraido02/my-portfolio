@@ -24,7 +24,7 @@ function Hero() {
           <path d="M2 8 C 60 2, 120 11, 180 5 S 270 6, 298 4" pathLength="1" />
         </svg>
         <p className="subtitle">
-          Computer Science student. I build websites and draw by hand.
+          Computer Science student. I build websites and loves to draw.
         </p>
         <div className="buttons">
           <a href="#sketchbook" className="btn">Open the sketchbook</a>
@@ -34,7 +34,7 @@ function Hero() {
 
       <div className="sheet" ref={sheetRef}>
         <img
-          src="/art/creature-sketch.jpg"
+          src="/art/cosmic-wing.JPG"
           alt="Drawing of a creature with a wide open mouth"
         />
         <span className="note">more pages below ↓</span>
