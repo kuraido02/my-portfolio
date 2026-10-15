@@ -2,17 +2,17 @@ import { useEffect, useState } from 'react'
 import Reveal from './Reveal'
 
 const artworks = [
-  { file: 'giant-and-man.jpg', title: 'The Giant and the Man', technique: 'Hatching' },
-  { file: 'mushroom-island.jpg', title: 'Floating Island', technique: 'Stippling' },
-  { file: 'turtle-world.jpg', title: 'Turtle World', technique: 'Stippling' },
-  { file: 'snake-visor.jpg', title: 'Serpent and Visor', technique: 'Stippling' },
-  { file: 'cosmic-wing.jpg', title: 'Cosmic Wing', technique: 'Stippling' },
-  { file: 'winged-dog.jpg', title: 'Winged Hound', technique: 'Stippling' },
-  { file: 'clockwork.jpg', title: 'Clockwork', technique: 'Mixed linework' },
-  { file: 'creature-sketch.jpg', title: 'Study of a Creature', technique: 'Hatching' },
-  { file: 'portrait.jpg', title: 'Portrait', technique: 'Hatching' },
-  { file: 'clown.jpg', title: 'Grin', technique: 'Linework' },
-  { file: 'masks.jpg', title: 'Masks', technique: 'Linework' },
+  { file: 'giant-and-man.JPG', title: 'The Giant and the Man', technique: 'Hatching' },
+  { file: 'mushroom-island.JPG', title: 'Floating Island', technique: 'Stippling' },
+  { file: 'turtle-world.JPG', title: 'Turtle World', technique: 'Stippling' },
+  { file: 'snake-visor.JPG', title: 'Serpent and Visor', technique: 'Stippling' },
+  { file: 'cosmic-wing.JPG', title: 'Cosmic Wing', technique: 'Stippling' },
+  { file: 'winged-dog.JPG', title: 'Winged Hound', technique: 'Stippling' },
+  { file: 'clockwork.JPG', title: 'Clockwork', technique: 'Mixed linework' },
+  { file: 'creature-sketch.JPG', title: 'Study of a Creature', technique: 'Hatching' },
+  { file: 'portrait.JPG', title: 'Portrait', technique: 'Hatching' },
+  { file: 'clown.JPG', title: 'Grin', technique: 'Linework' },
+  { file: 'masks.JPG', title: 'Masks', technique: 'Linework' },
 ]
 
 const tilts = [-1.2, 0.8, -0.5, 1]
