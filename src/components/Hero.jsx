@@ -1,14 +1,43 @@
+import { useRef } from 'react'
+
 function Hero() {
+  const sheetRef = useRef(null)
+
+  const handleMove = (e) => {
+    const x = e.clientX / window.innerWidth - 0.5
+    const y = e.clientY / window.innerHeight - 0.5
+    const el = sheetRef.current
+    el.style.setProperty('--rx', `${-y * 8}deg`)
+    el.style.setProperty('--ry', `${x * 10}deg`)
+  }
+
   return (
-    <section id="home" className="hero">
-      <p className="eyebrow">Hello, I'm</p>
-      <h1>Ivan Clyd Suello</h1>
-      <p className="subtitle">
-        4th-year BS Computer Science student looking for a web development OJT.
-      </p>
-      <div className="buttons">
-        <a href="#projects" className="btn">View my projects</a>
-        <a href="https://github.com/kuraido02" className="btn btn-outline">GitHub</a>
+    <section id="home" className="hero" onMouseMove={handleMove}>
+      <div className="hero-text">
+        <p className="eyebrow">Portfolio · 2026</p>
+        <h1>
+          Ivan Clyd
+          <br />
+          Suello
+        </h1>
+        <svg className="scribble" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M2 8 C 60 2, 120 11, 180 5 S 270 6, 298 4" pathLength="1" />
+        </svg>
+        <p className="subtitle">
+          Computer Science student. I build websites and draw by hand.
+        </p>
+        <div className="buttons">
+          <a href="#sketchbook" className="btn">Open the sketchbook</a>
+          <a href="#projects" className="btn btn-outline">Projects</a>
+        </div>
+      </div>
+
+      <div className="sheet" ref={sheetRef}>
+        <img
+          src="/art/creature-sketch.jpg"
+          alt="Drawing of a creature with a wide open mouth"
+        />
+        <span className="note">more pages below ↓</span>
       </div>
     </section>
   )
