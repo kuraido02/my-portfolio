@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react'
 import Reveal from './Reveal'
 
 const artworks = [
-  { file: 'giant-and-man.JPG', title: 'The Giant and the Man', technique: 'Hatching' },
-  { file: 'mushroom-island.JPG', title: 'Floating Island', technique: 'Stippling' },
-  { file: 'turtle-world.JPG', title: 'Turtle World', technique: 'Stippling' },
-  { file: 'snake-visor.JPG', title: 'Serpent and Visor', technique: 'Stippling' },
-  { file: 'cosmic-wing.JPG', title: 'Cosmic Wing', technique: 'Stippling' },
+  { file: 'giant-and-man.JPG', title: 'The Demon and the Man', technique: 'Hatching' },
+  { file: 'mushroom-island.JPG', title: 'Mushroom Island', technique: 'Stippling' },
+  { file: 'turtle-world.JPG', title: 'Torterra', technique: 'Stippling' },
+  { file: 'snake-visor.JPG', title: 'Serpent and Cat Visor', technique: 'Stippling' },
+  { file: 'cosmic-wing.JPG', title: 'Butterfly Effect', technique: 'Stippling' },
   { file: 'winged-dog.JPG', title: 'Winged Hound', technique: 'Stippling' },
-  { file: 'clockwork.JPG', title: 'Clockwork', technique: 'Mixed linework' },
-  { file: 'creature-sketch.JPG', title: 'Study of a Creature', technique: 'Hatching' },
-  { file: 'portrait.JPG', title: 'Portrait', technique: 'Hatching' },
-  { file: 'clown.JPG', title: 'Grin', technique: 'Linework' },
+  { file: 'clockwork.JPG', title: 'Dark World', technique: 'Mixed linework' },
+  { file: 'creature-sketch.JPG', title: 'Monster', technique: 'Hatching' },
+  { file: 'portrait.JPG', title: 'Eren Yeager', technique: 'Hatching' },
+  { file: 'clown.JPG', title: 'Clown', technique: 'Linework' },
   { file: 'masks.JPG', title: 'Masks', technique: 'Linework' },
 ]
 

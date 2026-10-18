@@ -37,7 +37,7 @@ function Hero() {
           src="/art/cosmic-wing.JPG"
           alt="Drawing of a creature with a wide open mouth"
         />
-        <span className="note">more pages below ↓</span>
+        <span className="note">more below ↓</span>
       </div>
     </section>
   )
