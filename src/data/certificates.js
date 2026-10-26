@@ -1,9 +1,9 @@
 export const certificates = [
   {
-    title: 'Certificate title here',
-    issuer: 'Issuer name',
-    date: 'Month Year',
-    file: 'first-certificate.jpg',
+    title: 'Legacy Responsive Web Design V8',
+    issuer: 'freeCodeCamp',
+    date: 'August 25, 2026',
+    file: 'first-certificate.png',
     link: '',
   },
 ]

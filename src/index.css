@@ -218,3 +218,29 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .scribble path { animation: none; stroke-dashoffset: 0; }
 }
+
+/* certificates */
+.certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.cert {
+  border: 1px solid var(--line);
+  background: #101010;
+  cursor: zoom-in;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.cert:hover { border-color: var(--ink); transform: translateY(-4px); }
+.cert img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #0d0d0d;
+  border-bottom: 1px solid var(--line);
+}
+.cert figcaption { display: flex; flex-direction: column; gap: 0.15rem; padding: 1rem 1.1rem 1.2rem; }
+.cert strong { font-family: var(--display); font-weight: 500; font-size: 1.25rem; line-height: 1.2; }
+.cert span { color: var(--muted); font-size: 0.85rem; }
+.cert small { margin-top: 0.3rem; color: var(--muted); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* certificates keep their real colors when opened */
+.cert-view img { mix-blend-mode: normal; filter: none; }
+.lightbox figcaption a { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #151515; text-decoration: underline; }
