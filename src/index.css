@@ -206,19 +206,6 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; gap: 3.5rem; }
-  .plates { column-count: 2; }
-}
-@media (max-width: 560px) {
-  .plates { column-count: 1; }
-  .navbar nav a { margin-left: 0.9rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .scribble path { animation: none; stroke-dashoffset: 0; }
-}
-
 /* certificates */
 .certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
 .cert {
