@@ -231,3 +231,97 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 /* certificates keep their real colors when opened */
 .cert-view img { mix-blend-mode: normal; filter: none; }
 .lightbox figcaption a { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #151515; text-decoration: underline; }
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* never scroll sideways, never overflow */
+body { overflow-x: clip; }
+img, video { max-width: 100%; }
+
+/* fluid spacing and type: scales smoothly between screen sizes */
+.section { padding: clamp(3.5rem, 9vw, 6rem) clamp(1.25rem, 4vw, 2rem); }
+.section h2 { font-size: clamp(2rem, 6vw, 2.6rem); }
+.hero h1 { font-size: clamp(3rem, 10vw, 6.2rem); }
+.hero { min-height: calc(100svh - 70px); }
+.grid { grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); }
+.certs { grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); }
+.logo { white-space: nowrap; }
+
+/* comfortable tap targets */
+.btn, .close { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
+/* hamburger button: hidden on desktop */
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* tablet and below */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 3.5rem; min-height: auto; padding-top: 2.5rem; }
+  .sheet { width: 100%; max-width: 520px; margin: 0 auto; }
+  .plates { column-count: 2; }
+}
+
+/* phones and small tablets: hamburger menu */
+@media (max-width: 760px) {
+  .navbar { padding: 0.5rem 1.25rem; }
+
+  .menu-toggle { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+  .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
+  .menu-toggle[aria-expanded='true'] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded='true'] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .navbar nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    padding: 0.25rem 1.25rem 1rem;
+    background: rgba(10, 10, 10, 0.98);
+    border-bottom: 1px solid var(--line);
+  }
+  .navbar nav.open { display: flex; }
+  .navbar nav a { margin: 0; padding: 0.9rem 0; font-size: 1rem; border-bottom: 1px solid var(--line); }
+  .navbar nav a:last-child { border-bottom: 0; }
+}
+
+/* phones */
+@media (max-width: 560px) {
+  .plates { column-count: 1; }
+  .hero { padding: 2rem 1.25rem 4.5rem; gap: 3rem; }
+  .sheet { padding: 10px; }
+  .sheet::before, .sheet::after { width: 60px; height: 20px; }
+  .section h2::after { margin-left: 1rem; }
+
+  .lightbox { padding: 3.5rem 0.75rem 1rem; }
+  .lightbox figure { max-width: 100%; padding: 10px 10px 6px; }
+  .lightbox img { max-height: 72vh; }
+  .close { top: 0.75rem; right: 0.75rem; }
+}
+
+/* touch screens: no sticky hover effects after a tap */
+@media (hover: none) {
+  .card:hover, .cert:hover { transform: none; border-color: var(--line); }
+  .plate:hover { transform: rotate(var(--tilt, 0deg)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55); }
+}
+
+/* respect "reduce motion" settings */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .scribble path { animation: none; stroke-dashoffset: 0; }
+}
