@@ -1,16 +1,84 @@
-# React + Vite
+# Ivan Clyd Suello | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal portfolio built with **React** and **Vite**, designed as a dark sketchbook: black pages, paper-textured drawings, and slow, quiet animations.
 
-Currently, two official plugins are available:
+**Live site:** _coming soon_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+I'm a 4th-year BS Computer Science student looking for a web development OJT. This site shows my ink drawings, projects, and certificates.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
 
-## Expanding the Oxlint configuration
+- **Hero:** introduction, with a drawing that tilts as the mouse moves
+- **About:** a short introduction
+- **Skills:** the tools I use and the ones I'm learning
+- **Projects:** web systems I've built, with links to their code
+- **Certificates:** courses and recognitions, with a full-size viewer
+- **Sketchbook:** a gallery of my drawings, with a full-size viewer
+- **Contact:** how to reach me
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Built with
+
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- Plain CSS, with no UI libraries
+- Oxlint for code checking
+
+## Run it locally
+
+You need [Node.js](https://nodejs.org/) (LTS version) installed.
+
+```bash
+git clone https://github.com/kuraido02/my-portfolio.git
+cd my-portfolio
+npm install
+npm run dev
+```
+
+Then open the link Vite prints, usually `http://localhost:5173`.
+
+To make a production build:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project structure
+
+```
+my-portfolio/
+├── public/
+│   ├── art/             # drawings for the sketchbook
+│   └── certificates/    # certificate images
+└── src/
+    ├── components/      # Navbar, Hero, About, Skills, Projects,
+    │                    # Certificates, Gallery, Contact, Reveal
+    ├── data/            # certificates.js, project.js
+    ├── App.jsx
+    ├── main.jsx
+    └── index.css        # all styles
+```
+
+## Updating content
+
+**Add a certificate:** save the image in `public/certificates/`, then copy a block in `src/data/certificates.js` and change its details.
+
+**Add a project:** copy a block in `src/data/project.js` and change its details.
+
+**Add a drawing:** save the image in `public/art/`, then add an entry to the `artworks` list in `src/components/Gallery.jsx`.
+
+## Design notes
+
+- Colors are black, off-white, and grays. There are no bright colors.
+- It's responsive, with a mobile menu, tablet layouts, and comfortable tap targets.
+- Animations respect the "reduce motion" setting on a device.
+
+## Copyright
+
+All drawings and artwork on this site are my original work. All rights reserved. Please don't reuse them without my permission.
+
+## Contact
+
+GitHub: [@kuraido02](https://github.com/kuraido02)
